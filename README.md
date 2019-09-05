@@ -2,7 +2,7 @@
   <img src="https://cp.jurosbaixos.com.br/images/logocolorido.png" alt="Logo">
 </p>
 <p align="center">
-  <img src="https://media.giphy.com/media/Nx0rz3jtxtEre/source.gif" alt="Hello There">
+  <img src="./hello-there.gif" alt="Hello There">
 </p>
 
 Bem vindo, jovem padawan. Este desafio tem como único propósito testar suas
