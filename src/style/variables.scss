@@ -1,0 +1,18 @@
+$base-font-family: monospace, sans-serif;
+
+$green-style-1: #43a085;
+$green-style-2: #43a292;
+$green-style-3: #5ffbf1;
+
+$shadow-color: #1D261D;
+$white-color: #ffffff;
+$greey-color: #d3d3d3;
+
+$default-linear-gradient: linear-gradient(to left bottom, $green-style-1, $green-style-2, $green-style-3);
+
+//queries
+$breakpoints: (
+  'small':  ( min-width:  769px ),
+  'medium': ( min-width:  993px ),
+  'large':  ( min-width: 1400px )
+) !default;
