@@ -55,6 +55,6 @@ optar ou não por criar o projeto usando o **Vue-CLI** mas considere que a
 arquitetura também será avaliada.
 
 Depois de criar o **pull-request**, envie um email para
-**alisson.jurosbaixos@gmail.com.br** com o título **Desafio PokéAPI**.
+**alisson@jurosbaixos.com.br** com o título **Desafio PokéAPI**.
 
 Boa sorte, e que a força esteja com você.
