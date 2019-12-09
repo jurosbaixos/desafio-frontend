@@ -34,7 +34,7 @@ alteração pode ser feita (seja criativo, ouse bastante!).
 
 ## Requisitos
 
-- Usar Vue.js ou Nuxt
+- Utilizar Javascript(pode utilizar qualquer framework se desejar)
 - **NÃO** usar bibliotecas como Material ou Bootstrap
 - Usar e abusar de **CSS** (animações ficam a seu critério, mas muito bem
   vindas)
@@ -42,11 +42,16 @@ alteração pode ser feita (seja criativo, ouse bastante!).
 
 ## Opcionais
 
+- Usar Vue.js ou Nuxt
 - Animações CSS
 - SASS/SCSS
 - Typescript
-- Testes
-- [Storybook](https://storybook.js.org/)
+
+## Dicas
+
+- Se necessário pode mockar alguns dados
+- Tente utilizar a menor quantidade de requests possível
+- Você tem total liberdade para mudar e inovar no projeto.
 
 ## Entrega
 
