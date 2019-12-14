@@ -1,0 +1,15 @@
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL:'https://pokeapi.co/api/v2/'
+});
+
+export default {
+  listPokemons: () =>{
+    return api.get('pokemon/')
+
+  },
+  getPokemon: (name) => {
+    return api.get(`pokemon/${name}`)
+  }
+}

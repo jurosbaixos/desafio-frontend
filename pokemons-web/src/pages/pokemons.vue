@@ -6,7 +6,9 @@
       <div class="container_list">
 
         <BtnFilter />
-          <p>{{pokemon}}</p>
+        {{nome}}
+        <p>{{pokemonInfo}}</p>
+
       </div>
 
     </section>
@@ -17,15 +19,31 @@
 import Header from '../components/Header';
 import BtnFilter from '../components/BtnFilter';
 
-import { mapState } from 'vuex'
+import { mapState, mapActions } from 'vuex'
 
 export default {
   components: {
     Header,
     BtnFilter,
   },
+  data(){
+    return{
+      nome: [],
+    }
+  },
   computed:{
-    ...mapState(['pokemon'])
+    ...mapState(['pokemons','pokemonInfo'])
+  },
+  methods:{
+    ...mapActions([ 'getInfoPokemons', 'getPokemons'])
+  },
+  async mounted(){
+    await this.getPokemons();
+    this.pokemons.map(pokemon =>{
+      this.nome = [...this.nome, pokemon.name]
+      this.getInfoPokemons(pokemon.name)
+    })
+
   }
 }
 </script>
