@@ -1,13 +1,26 @@
 <template>
-  <Header />
+  <div>
+    <Header />
+    <section class="container">
+
+      <div class="container_list">
+
+        <BtnFilter />
+
+      </div>
+
+    </section>
+  </div>
 </template>
 
 <script>
 import Header from '../components/Header';
+import BtnFilter from '../components/BtnFilter';
 
 export default {
   components: {
     Header,
+    BtnFilter,
   },
 }
 </script>
