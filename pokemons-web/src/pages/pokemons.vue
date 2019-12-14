@@ -6,7 +6,7 @@
       <div class="container_list">
 
         <BtnFilter />
-
+          <p>{{pokemon}}</p>
       </div>
 
     </section>
@@ -17,11 +17,16 @@
 import Header from '../components/Header';
 import BtnFilter from '../components/BtnFilter';
 
+import { mapState } from 'vuex'
+
 export default {
   components: {
     Header,
     BtnFilter,
   },
+  computed:{
+    ...mapState(['pokemon'])
+  }
 }
 </script>
 <style lang="scss">
