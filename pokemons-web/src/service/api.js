@@ -6,7 +6,7 @@ const api = axios.create({
 
 export default {
   listPokemons: () =>{
-    return api.get('pokemon/')
+    return api.get('pokemon?limit=6')
 
   },
   getPokemon: (name) => {

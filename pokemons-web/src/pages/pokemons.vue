@@ -4,10 +4,8 @@
     <section class="container">
 
       <div class="container_list">
-
         <BtnFilter />
-        {{nome}}
-        <p>{{pokemonInfo}}</p>
+        <List :pokemons="pokemonInfo" />
 
       </div>
 
@@ -18,6 +16,7 @@
 <script>
 import Header from '../components/Header';
 import BtnFilter from '../components/BtnFilter';
+import List from '../components/List';
 
 import { mapState, mapActions } from 'vuex'
 
@@ -25,23 +24,23 @@ export default {
   components: {
     Header,
     BtnFilter,
+    List,
   },
   data(){
     return{
-      nome: [],
+      pokemons: [ "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard" ],
     }
   },
   computed:{
-    ...mapState(['pokemons','pokemonInfo'])
+    ...mapState(['pokemonInfo'])
   },
   methods:{
-    ...mapActions([ 'getInfoPokemons', 'getPokemons'])
+    ...mapActions([ 'getInfoPokemons'])
   },
-  async mounted(){
-    await this.getPokemons();
+  mounted(){
+
     this.pokemons.map(pokemon =>{
-      this.nome = [...this.nome, pokemon.name]
-      this.getInfoPokemons(pokemon.name)
+      this.getInfoPokemons(pokemon)
     })
 
   }
