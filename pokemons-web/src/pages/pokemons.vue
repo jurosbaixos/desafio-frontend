@@ -2,14 +2,18 @@
   <div>
     <Header />
     <section class="container">
-
       <div class="container_list">
+
         <BtnFilter />
         <List :pokemons="pokemonInfo" />
 
       </div>
-
     </section>
+
+    <div v-if="openModal">
+      <Modal />
+    </div>
+
   </div>
 </template>
 
@@ -17,6 +21,7 @@
 import Header from '../components/Header';
 import BtnFilter from '../components/BtnFilter';
 import List from '../components/List';
+import Modal from '../components/Modal';
 
 import { mapState, mapActions } from 'vuex'
 
@@ -25,6 +30,7 @@ export default {
     Header,
     BtnFilter,
     List,
+    Modal,
   },
   data(){
     return{
@@ -32,7 +38,7 @@ export default {
     }
   },
   computed:{
-    ...mapState(['pokemonInfo'])
+    ...mapState(['pokemonInfo', 'openModal'])
   },
   methods:{
     ...mapActions([ 'getInfoPokemons'])
@@ -54,7 +60,7 @@ export default {
   background-color: rgba(246, 247, 252, 1)
   }
   .container_list{
-  width: 85%;
+  width: 80%;
   padding: 5%;
   }
 </style>

@@ -4,11 +4,11 @@
           <p>#00{{pokemon.id}}</p>
           <img src="../../assets/like.png">
         </div>
-        <img  :src="pokemon.sprites.front_default" :alt="pokemon.name" width="200" height="200">
+        <img @mouseover="changeImage"  @mouseout="changeImage" :src="img ? pokemon.sprites.front_default : pokemon.sprites.back_default" :alt="pokemon.name" width="200" height="200">
         <h2>{{pokemon.name}}</h2>
 
         <div class="pokemon_type">
-          <span v-for="type in pokemon.types" :key="type.type.name" >{{ type.type.name }}</span>
+          <p v-for="type in pokemon.types" :key="type.type.name" ><span :class=" type.type.name">{{ type.type.name }}</span></p>
         </div>
         <button @click="openModalPokemon(pokemon)" class="button_card">View More</button>
 
@@ -17,24 +17,34 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   name:'card',
   props:['pokemon'],
   data(){
     return {
-      info: ''
+      img: true,
     }
   },
   methods:{
-    openModalPokemon(newInfo){
-      this.info = newInfo
+    ...mapActions(['openModal', 'moreInfo']),
+
+    openModalPokemon(pokemonInfo){
+      this.openModal();
+     this.moreInfo(pokemonInfo)
+    },
+
+    changeImage(){
+      this.img = !this.img
     }
+
   }
 }
 </script>
 
 <style lang="scss">
 $aquamarine: #49d0b0;
+$aquamarineClick: #40a58d;
 $white: #fff;
 $dark: #212529;
 
@@ -54,6 +64,10 @@ $dark: #212529;
     font-size: 28px;
     font-weight: bolder;
     color: $dark;
+
+    &::first-letter{
+      text-transform: uppercase;
+    }
 
   }
   .pokemon_id {
@@ -76,6 +90,11 @@ $dark: #212529;
     font-size: 16px;
     font-weight: bold;
     color: #fff;
+
+    &:hover{
+      background: $aquamarineClick;
+      cursor: pointer;
+    }
   }
 
   .pokemon_type {
@@ -83,10 +102,9 @@ $dark: #212529;
     display: flex;
     justify-content: center;
     margin:12px 0 33px;
-    span {
-      height: 24px;
+    p {
       width: 60px;
-      padding: 2%;
+      padding: 3%;
       margin: 5px;
       font-weight: bold;
       font-size: 12px;
@@ -94,6 +112,16 @@ $dark: #212529;
       color: $aquamarine;
       background-color: #f6f7fc;
       border-radius: 10px;
+
+      &::first-letter{
+        text-transform: uppercase;
+      }
+      .fire{
+        color: #e98846;
+      }
+      .flying{
+        color: #e98846;
+      }
     }
   }
 }
