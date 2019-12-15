@@ -34,22 +34,20 @@ export default {
   },
   data(){
     return{
-      pokemons: [ "bulbasaur", "ivysaur", "venusaur", "charmander", "charmeleon", "charizard" ],
+
     }
   },
   computed:{
-    ...mapState(['pokemonInfo', 'openModal'])
+    ...mapState(['pokemonInfo', 'openModal', 'pokemons'])
   },
   methods:{
-    ...mapActions([ 'getInfoPokemons'])
+    ...mapActions([ 'getInfoPokemons']),
   },
   mounted(){
-
     this.pokemons.map(pokemon =>{
       this.getInfoPokemons(pokemon)
     })
-
-  }
+  },
 }
 </script>
 <style lang="scss">

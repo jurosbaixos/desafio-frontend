@@ -2,7 +2,7 @@
      <div class="pokemon_card">
         <div class="pokemon_id">
           <p>#00{{pokemon.id}}</p>
-          <img src="../../assets/like.png">
+          <img  src="../../assets/like.png">
         </div>
         <img @mouseover="changeImage"  @mouseout="changeImage" :src="img ? pokemon.sprites.front_default : pokemon.sprites.back_default" :alt="pokemon.name" width="200" height="200">
         <h2>{{pokemon.name}}</h2>
@@ -31,12 +31,13 @@ export default {
 
     openModalPokemon(pokemonInfo){
       this.openModal();
-     this.moreInfo(pokemonInfo)
+      this.moreInfo(pokemonInfo)
+
     },
 
     changeImage(){
       this.img = !this.img
-    }
+    },
 
   }
 }

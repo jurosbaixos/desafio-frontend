@@ -1,6 +1,6 @@
 <template>
     <div  class="pokemon_list" >
-      <div v-for="pokemon in pokemons" :key="pokemon.name">
+      <div v-for="pokemon in pokemons" :key="pokemon.id">
           <card :pokemon="pokemon" />
       </div>
     </div>
@@ -8,13 +8,16 @@
 </template>
 
 <script>
-import card from '../Card'
+
+import card from '../Card';
+
 export default {
   name:'List',
   props:['pokemons'],
   components: {
     card,
-  }
+  },
+
 }
 </script>
 
