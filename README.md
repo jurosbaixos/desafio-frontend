@@ -11,9 +11,7 @@ do que usamos hoje.
 
 Nosso projeto hoje está rodando em **Vue** com **Server Side Rendering**, usando
 o **Nuxt** e **PWA**. Usamos também **Typescript**, tanto no frontend, quanto no
-backend. Usamos também **Vuex** para gerenciar os estados da aplicação,
-**Webpack Monitor** e **BundleBuddy** para monitorar e medir as dependências que
-usamos.
+backend. Usamos também **Vuex** para gerenciar os estados da aplicação.
 
 O propósito deste desafio é testar seus conhecimentos nestas tecnologias de uma
 forma prática.
@@ -22,19 +20,17 @@ forma prática.
 
 Para esse desafio nosso time preparou um layout para que você possa desenvolver.
 Esperamos que seja fã de **Pokemon**. O layout está
-[neste link](https://app.sympli.io/p/4daa49f6741fe488ba4516cfce490c2f73322b3226),
-usamos o sympli para não ter barreiras de sistema operacional. Lá você conseguirá
-exportar todos os assets necessários, fontes, etc.
+[neste link](https://www.figma.com/proto/sa4rDcZYxpPTHPtMDCzQR0/desafio-front-end?node-id=5%3A5&scaling=min-zoom&page-id=0%3A1).
 
-Você deverá desenvolver um webapp (usando **Vue** ou **Nuxt**) que lista os
-**151 pokemons iniciais** junto com seus dados base, usando o
-[layout](https://www.figma.com/file/916sxwwZXNp9sk3VMEaEbb/Desafio-Frontend?node-id=0%3A1)
+Você deverá desenvolver um webapp (usando **Vue** ou **Nuxt**) que lista
+**todos pokemons iniciais separado por suas gerações** junto com seus dados base, usando o
+[layout](https://www.figma.com/proto/sa4rDcZYxpPTHPtMDCzQR0/desafio-front-end?node-id=5%3A5&scaling=min-zoom&page-id=0%3A1)
 criado por nós. A base do layout deve ser preservada, mas qualquer adição ou
 alteração pode ser feita (seja criativo, ouse bastante!).
 
 ## Requisitos
 
-- Utilizar Javascript(pode utilizar qualquer framework se desejar)
+- Utilizar Vue.js+vuex ou React+redux
 - **NÃO** usar bibliotecas como Material ou Bootstrap
 - Usar e abusar de **CSS** (animações ficam a seu critério, mas muito bem
   vindas)
@@ -42,16 +38,23 @@ alteração pode ser feita (seja criativo, ouse bastante!).
 
 ## Opcionais
 
-- Usar Vue.js ou Nuxt
 - Animações CSS
 - SASS/SCSS
 - Typescript
+- Testes(Jest, Cypress ou Mocha)
+
+## Você deve
+
+- Tratar todos os eventuais erros da API para evitar que o app quebre.
+- Deve utilizar alguma biblioteca externa de sprite para os pokemons a sua escolha, mas aqui tem uma **[dica](https://github.com/PokeAPI/sprites)**.
+- Ter um código limpo e claro, tente abusar da arquitetura e do reuso dos componentes.
 
 ## Dicas
 
-- Se necessário pode mockar alguns dados
-- Tente utilizar a menor quantidade de requests possível
+- Tente utilizar a menor quantidade de requests possível.
 - Você tem total liberdade para mudar e inovar no projeto.
+- Arquitetura conta muito, tente deixar seu código bem organizado.
+- O layout que te entregamos é apenas uma base, tente melhora-lo ao máximo
 
 ## Entrega
 
